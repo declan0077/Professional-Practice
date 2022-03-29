@@ -398,29 +398,24 @@ public class FirstPersonController : MonoBehaviour
     {
         if (view.IsMine)
         {
-
-
             RaycastHit hit;
             if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, range))
+                if (hit.collider != null && hit.collider.tag == "Object")
             {
-
-                if (true == hit.collider.GetComponent<Rigidbody>())
-                {
                     Debug.Log(hit.transform.name);
                     hit.collider.GetComponent<Rigidbody>().useGravity = false;
                     hit.transform.position = Hold.transform.position;
                     hit.transform.parent = Hold.transform;
                     hit.collider.transform.parent = Hold.transform;
-                }
-                if (null != hit.collider)
-                {
 
                 }
-            }
-            else
+            else if (hit.collider == null)
+
             {
-                
+    
+
             }
+   
         }
     }
     private void release()
