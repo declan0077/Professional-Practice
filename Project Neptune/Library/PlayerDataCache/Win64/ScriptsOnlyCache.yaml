@@ -7,6 +7,7 @@ ScriptsOnlyBuild:
     - CreateAndJoinRooms
     - FirstPersonController
     - OwnershipControl
+    - PlateTrigger
     - PointersController
     - ProximityVoiceTrigger
     - SpawnPlayers
@@ -20,6 +21,8 @@ ScriptsOnlyBuild:
     - Photon.Pun.Demo.PunBasics.PlayerUI
     - Photon.Pun.Demo.SlotRacer.PlayerControl
     - Photon.Pun.Demo.SlotRacer.Utils.SplineWalker
+    PhotonUnityNetworking.Editor.dll:
+    - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.Utilities.dll:
     - Photon.Pun.UtilityScripts.MoveByKeys
     PhotonUnityNetworking.dll:
@@ -40,9 +43,6 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
-    Unity.Timeline.Editor.dll:
-    - TimelinePreferences
-    - TimelineProjectSettings
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -90,8 +90,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -109,7 +107,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 5486}
     - Class: 114
-      Script: {instanceID: 21062}
+      Script: {instanceID: 6098}
+    - Class: 114
+      Script: {instanceID: 23304}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 135
@@ -160,6 +160,8 @@ ScriptsOnlyBuild:
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
       Script: {instanceID: 0}
     - Class: 90
       Script: {instanceID: 0}
@@ -283,6 +285,8 @@ ScriptsOnlyBuild:
     - Class: 48
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -1885,6 +1889,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: OwnershipControl
+  - hash:
+      serializedVersion: 2
+      Hash: 4145e327344c8380f3d6214b40934498
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlateTrigger
   platform: 19
   scenePathNames:
   - Assets/Loading.unity
