@@ -20,8 +20,10 @@ public class FirstPersonController : MonoBehaviour
     PhotonView view;
     private Rigidbody rb;
     public float range = 100;
-
+    private float foward = 5;
     public GameObject Hold;
+    private bool HoldingObject;
+
     private float camRotation;
     #region Camera Movement Variables
 
@@ -392,6 +394,7 @@ public class FirstPersonController : MonoBehaviour
             {
                 HeadBob();
             }
+            Debug.DrawLine(playerCamera.transform.position, playerCamera.transform.forward * foward);
         }
     }
     private void fire()
@@ -400,21 +403,28 @@ public class FirstPersonController : MonoBehaviour
         {
             RaycastHit hit;
             if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, range))
-                if (hit.collider != null && hit.collider.tag == "Object")
-            {
-                    Debug.Log(hit.transform.name);
-                    hit.collider.GetComponent<Rigidbody>().useGravity = false;
-                    hit.transform.position = Hold.transform.position;
-                    hit.transform.parent = Hold.transform;
-                    hit.collider.transform.parent = Hold.transform;
+                if (HoldingObject == false)
+                {
+
+
+                    if (hit.collider != null && hit.collider.tag == "Object")
+                    {
+                        Debug.Log(hit.transform.name);
+                        hit.collider.GetComponent<Rigidbody>().useGravity = false;
+                        hit.transform.position = Hold.transform.position;
+                        hit.transform.parent = Hold.transform;
+                        hit.collider.transform.parent = Hold.transform;
+                        hit.collider.gameObject.GetComponent<OwnershipControl>().Ownershipcontroller();
+                        HoldingObject = true;
+
+                    }
+                }
+                else if (hit.collider == null)
+
+                {
+
 
                 }
-            else if (hit.collider == null)
-
-            {
-    
-
-            }
    
         }
     }
@@ -424,7 +434,7 @@ public class FirstPersonController : MonoBehaviour
    
             Hold.transform.GetComponentInChildren<Rigidbody>().useGravity = true;
             Hold.transform.DetachChildren();
-     
+        HoldingObject = false;
       
     }
     void FixedUpdate()
