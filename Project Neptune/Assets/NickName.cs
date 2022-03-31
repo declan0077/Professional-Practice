@@ -8,7 +8,7 @@ public class NickName : MonoBehaviour
     public InputField nameseflfInput;
     public void nickname()
     {
-        PhotonNetwork.NickName = nameseflfInput.ToString();
+        PhotonNetwork.NickName = nameseflfInput.text.ToString();
     }
 
 }
