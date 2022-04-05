@@ -58,6 +58,7 @@
     <Compile Include="Assets\Photon\PhotonLibs\WebSocket\WebSocket.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\TextButtonTransition.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoProximityVoiceChat\Scripts\PointersController.cs" />
+    <Compile Include="Assets\NickName.cs" />
     <Compile Include="Assets\Photon\PhotonLibs\WebSocket\SocketWebTcp.cs" />
     <Compile Include="Assets\Scripts\SpawnPlayers.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoProximityVoiceChat\Scripts\ProximityVoiceTrigger.cs" />
@@ -71,11 +72,13 @@
     <Compile Include="Assets\PlateTrigger.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\IgnoreUiRaycastWhenInactive.cs" />
     <Compile Include="Assets\Scripts\LookAtMouse.cs" />
+    <Compile Include="Assets\PlayerName.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\EventSystemSpawner.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoProximityVoiceChat\Scripts\ChangeName.cs" />
     <Compile Include="Assets\Bitgem\StylisedWater\URP\Scripts\Bitgem\Core\FlagEnumAttribute.cs" />
     <Compile Include="Assets\Bitgem\StylisedWater\URP\Scripts\Bitgem\VFX\StylisedWater\WaterVolumeHelper.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\FriendItem.cs" />
+    <Compile Include="Assets\WebcamScript.cs" />
     <Compile Include="Assets\Scripts\FirstPersonController.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatGui.cs" />
     <Compile Include="Assets\Bitgem\StylisedWater\URP\Scripts\Bitgem\VFX\StylisedWater\WaterVolumeBox.cs" />
@@ -85,9 +88,8 @@
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\OnStartDelete.cs" />
     <Compile Include="Assets\Scripts\CreateAndJoinRooms.cs" />
     <Compile Include="Assets\OwnershipControl.cs" />
-    <Compile Include="Assets\WebcamScript.cs" />
-    <Compile Include="Assets\PlayerName.cs" />
-    <Compile Include="Assets\NickName.cs" />
+    <Compile Include="Assets\NewBehaviourScript.cs" />
+    <Compile Include="Assets\DoorWindow.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

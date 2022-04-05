@@ -6,7 +6,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637841701416300414
+      ticks: 637843547031896831
     m_Hash: 4213102355
   m_LockFileStatus:
     m_FilePath: C:/Users/iceth/OneDrive/Documents/GitHub/Professional-Practice/Project
@@ -15,7 +15,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637841701416355424
+      ticks: 637843547043100177
     m_Hash: 3921338660
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
@@ -326,6 +326,7 @@ m_PackageAssets:
         - 2.0.11
         - 2.0.12
         - 2.0.14
+        - 2.0.15
         compatible:
         - 1.0.2
         - 1.0.3
@@ -344,7 +345,8 @@ m_PackageAssets:
         - 2.0.11
         - 2.0.12
         - 2.0.14
-        verified: 2.0.14
+        - 2.0.15
+        verified: 2.0.15
       dependencies:
       - name: com.unity.test-framework
         version: 1.1.9
