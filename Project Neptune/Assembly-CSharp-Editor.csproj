@@ -53,9 +53,9 @@
     <UnityVersion>2020.3.22f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\AssetStoreOriginals\_SNAPS_PrototypingAssets\Scripts\Editor\PackageChecker\PackageChecker.cs" />
     <Compile Include="Assets\Bitgem\StylisedWater\URP\Scripts\Bitgem\Editor\FlagEnumAttributeDrawer.cs" />
     <Compile Include="Assets\AssetStoreOriginals\_SNAPS_PrototypingAssets\About\Scripts\Editor\ReadmeEditor.cs" />
-    <Compile Include="Assets\AssetStoreOriginals\_SNAPS_PrototypingAssets\Scripts\Editor\PackageChecker\PackageChecker.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\AssetStoreOriginals\_SNAPS_PrototypingAssets\Scripts\Editor\PackageChecker\settings\PackageImportList_ShaderGraph.txt" />
@@ -286,9 +286,6 @@
     </Reference>
     <Reference Include="UnityEditor.Graphs">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.22f1\Editor\Data\Managed\UnityEditor.Graphs.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.WebGL.Extensions">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.22f1\Editor\Data\PlaybackEngines\WebGLSupport\UnityEditor.WebGL.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.22f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
@@ -686,8 +683,8 @@
     <Reference Include="Unity.VisualStudio.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Timeline.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+    <Reference Include="Unity.ProBuilder.AddOns.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.AddOns.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
@@ -695,32 +692,32 @@
     <Reference Include="Unity.TextMeshPro">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.ProBuilder">
+      <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.ProBuilder">
-      <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.dll</HintPath>
+    <Reference Include="Unity.ProGrids.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.ProGrids.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.ProBuilder.AddOns.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.AddOns.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.ProBuilder.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.Editor.dll</HintPath>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
       <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.ProGrids.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.ProGrids.Editor.dll</HintPath>
+    <Reference Include="Unity.Timeline.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ProGrids">
       <HintPath>Library\ScriptAssemblies\Unity.ProGrids.dll</HintPath>
@@ -731,37 +728,13 @@
       <Project>{BFD38179-4DCA-6327-2E7A-81B8AC4CAC67}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
-    <ProjectReference Include="PhotonVoice.csproj">
-      <Project>{7C219383-2FC5-215B-7D04-5F9E68DF911D}</Project>
-      <Name>PhotonVoice</Name>
-    </ProjectReference>
-    <ProjectReference Include="PhotonUnityNetworking.csproj">
-      <Project>{5A3DF078-BC06-DDD0-2E1D-39D2E9CC08D6}</Project>
-      <Name>PhotonUnityNetworking</Name>
-    </ProjectReference>
     <ProjectReference Include="PhotonChat.csproj">
       <Project>{64421BEC-EC8F-17FF-D29C-E7102623D814}</Project>
       <Name>PhotonChat</Name>
     </ProjectReference>
-    <ProjectReference Include="PhotonVoice.Editor.csproj">
-      <Project>{02059FF7-0E07-905C-DB08-3F651A24688B}</Project>
-      <Name>PhotonVoice.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="PhotonVoice.API.csproj">
       <Project>{B852C37B-3A00-9EC0-E9F5-41CD7CD2EA3A}</Project>
       <Name>PhotonVoice.API</Name>
-    </ProjectReference>
-    <ProjectReference Include="PhotonUnityNetworking.Demos.csproj">
-      <Project>{FE33EB1D-2C17-37F2-F5C2-9F2C87C6F2A7}</Project>
-      <Name>PhotonUnityNetworking.Demos</Name>
-    </ProjectReference>
-    <ProjectReference Include="PhotonVoice.PUN.Editor.csproj">
-      <Project>{C4C6D066-7CB9-A89A-DB0F-130280173001}</Project>
-      <Name>PhotonVoice.PUN.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="PhotonVoice.Utilities.Editor.csproj">
-      <Project>{B3FEFA39-9817-E164-0FAE-61794711C3D3}</Project>
-      <Name>PhotonVoice.Utilities.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Editor.csproj">
       <Project>{BD147CB2-2DFB-241D-0AC8-6850548D5E1E}</Project>
@@ -782,6 +755,30 @@
     <ProjectReference Include="PhotonUnityNetworking.Utilities.csproj">
       <Project>{C4E73888-FE4D-938B-6680-84A72F5B91C6}</Project>
       <Name>PhotonUnityNetworking.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonVoice.csproj">
+      <Project>{7C219383-2FC5-215B-7D04-5F9E68DF911D}</Project>
+      <Name>PhotonVoice</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonUnityNetworking.csproj">
+      <Project>{5A3DF078-BC06-DDD0-2E1D-39D2E9CC08D6}</Project>
+      <Name>PhotonUnityNetworking</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonVoice.Editor.csproj">
+      <Project>{02059FF7-0E07-905C-DB08-3F651A24688B}</Project>
+      <Name>PhotonVoice.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonUnityNetworking.Demos.csproj">
+      <Project>{FE33EB1D-2C17-37F2-F5C2-9F2C87C6F2A7}</Project>
+      <Name>PhotonUnityNetworking.Demos</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonVoice.PUN.Editor.csproj">
+      <Project>{C4C6D066-7CB9-A89A-DB0F-130280173001}</Project>
+      <Name>PhotonVoice.PUN.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonVoice.Utilities.Editor.csproj">
+      <Project>{B3FEFA39-9817-E164-0FAE-61794711C3D3}</Project>
+      <Name>PhotonVoice.Utilities.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="PunDemos.DemoSlotcarEditor.csproj">
       <Project>{16C1E41F-8A28-D5A1-CC28-2E93244E3A60}</Project>
