@@ -78,6 +78,7 @@
     <Compile Include="Assets\PlateTrigger.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\IgnoreUiRaycastWhenInactive.cs" />
     <Compile Include="Assets\Scripts\LookAtMouse.cs" />
+    <Compile Include="Assets\Connor\FallingFloor\FallingFloorFix.cs" />
     <Compile Include="Assets\PlayerName.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\EventSystemSpawner.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoProximityVoiceChat\Scripts\ChangeName.cs" />
@@ -96,7 +97,7 @@
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\OnStartDelete.cs" />
     <Compile Include="Assets\Scripts\CreateAndJoinRooms.cs" />
     <Compile Include="Assets\OwnershipControl.cs" />
-    <Compile Include="Assets\Connor\FallingFloor\FallingFloorFix.cs" />
+    <Compile Include="Assets\Rotater.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
