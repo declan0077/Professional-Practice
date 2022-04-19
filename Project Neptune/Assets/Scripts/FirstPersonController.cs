@@ -19,7 +19,7 @@ public class FirstPersonController : MonoBehaviour
     public GameObject Hold;
     private bool HoldingObject;
     private string playerName;
-
+    private Vector3 spawnPos;
 
     private float camRotation;
     #region Camera Movement Variables
@@ -161,7 +161,8 @@ public class FirstPersonController : MonoBehaviour
 
     void Start()
     {
-        view = GetComponent<PhotonView>();
+        spawnPos = transform.position;
+      view = GetComponent<PhotonView>();
         if (!view.IsMine)
         {
             Destroy(playerCamera);
@@ -215,7 +216,10 @@ public class FirstPersonController : MonoBehaviour
         }
     }
 
-
+    public void restart()
+    {
+        transform.position = spawnPos;
+    }
 
     private void Update()
     {

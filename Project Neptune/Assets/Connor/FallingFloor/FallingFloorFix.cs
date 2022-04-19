@@ -10,12 +10,12 @@ public class FallingFloorFix : MonoBehaviour
     Rigidbody myRB;
     private bool checking = false;
 
-    private Transform startLocation;
+    private Vector3 startLocation;
 
     private void Start()
     {
         myRB = GetComponent<Rigidbody>();
-      startLocation = this.transform;
+      startLocation = transform.position;
         StartCoroutine("DoCheck");
     }
 
@@ -27,11 +27,11 @@ public class FallingFloorFix : MonoBehaviour
             if (isFalse)
             {
                 DropFloor();
-                Destroy(this, 2);
+                StartCoroutine("DoCheck");
             }
             else
             {
-                Invoke("Restart", 3);
+                StartCoroutine("DoCheck");
             }
         }
     }
@@ -39,10 +39,11 @@ public class FallingFloorFix : MonoBehaviour
     {
         checking = true;
         myRB.isKinematic = false;
-        this.transform.position = startLocation.position;
+        transform.position = startLocation;
         myRB.velocity = new Vector3(0, 0, 0);
+        myRB.useGravity = false;
+        myRB.mass = 50;
         yield return new WaitForSeconds(1f);
-        StartCoroutine("DoCheck");
         checking = false;
   
 
@@ -51,14 +52,16 @@ public class FallingFloorFix : MonoBehaviour
     private void DropFloor()
     {
         myRB.isKinematic = true;
+        myRB.useGravity = true;
+        StartCoroutine("DoCheck");
+        myRB.mass = 1;
     }
 
     private void Restart()
     {
         myRB.isKinematic = false;
-        myRB.velocity = new Vector3(0, 0, 0);
-        this.transform.position = startLocation.position;
-        this.transform.rotation = startLocation.rotation;
+        this.transform.position = startLocation;
+        StartCoroutine("DoCheck");
 
     }
 
