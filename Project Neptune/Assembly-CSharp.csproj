@@ -57,6 +57,7 @@
     <Compile Include="Assets\PlateTriggerHold.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoProximityVoiceChat\Scripts\ChangeColor.cs" />
     <Compile Include="Assets\Connor\FallingFloor\FallingFloor.cs" />
+    <Compile Include="Assets\Rotater.cs" />
     <Compile Include="Assets\Photon\PhotonLibs\WebSocket\WebSocket.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\TextButtonTransition.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoProximityVoiceChat\Scripts\PointersController.cs" />
@@ -97,7 +98,7 @@
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\OnStartDelete.cs" />
     <Compile Include="Assets\Scripts\CreateAndJoinRooms.cs" />
     <Compile Include="Assets\OwnershipControl.cs" />
-    <Compile Include="Assets\Rotater.cs" />
+    <Compile Include="Assets\PlatformScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

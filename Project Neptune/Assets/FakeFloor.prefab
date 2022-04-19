@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8234704547908135784}
   - component: {fileID: 7945776359480889098}
   - component: {fileID: 690915448779707669}
+  - component: {fileID: 8105948439174733286}
   m_Layer: 0
   m_Name: FakeFloor
   m_TagString: Untagged
@@ -29,8 +30,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 690915448779707668}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.014, y: 1.999, z: 3.02}
-  m_LocalScale: {x: 1, y: -0.026903, z: 1}
+  m_LocalPosition: {x: 19.817333, y: 1.0134506, z: -10.607772}
+  m_LocalScale: {x: 3, y: 0.026903, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -92,11 +93,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 690915448779707668}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 21.55168, z: 1}
-  m_Center: {x: 0, y: -10.275837, z: 0}
+  m_Size: {x: 1, y: 0, z: 1}
+  m_Center: {x: 0, y: -0.44580197, z: 0}
 --- !u!54 &7945776359480889098
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -126,3 +127,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFalse: 1
+--- !u!65 &8105948439174733286
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690915448779707668}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 13.17, z: 1}
+  m_Center: {x: 0, y: 7.2, z: 0}

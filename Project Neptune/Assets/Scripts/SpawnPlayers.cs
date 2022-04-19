@@ -34,7 +34,8 @@ public class SpawnPlayers : MonoBehaviourPunCallbacks
     }
     public override void OnJoinedRoom()
     {
-        Vector2 randomPostion = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
+        Vector3 randomPostion = new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY));
+        randomPostion += this.transform.position;
         PhotonNetwork.Instantiate(playerPrefab.name, randomPostion, Quaternion.identity);
     }
 
