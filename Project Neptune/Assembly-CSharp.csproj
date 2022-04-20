@@ -54,14 +54,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Photon\PhotonRealtime\Demos\DemoLoadBalancing\ConnectAndJoinRandomLb.cs" />
-    <Compile Include="Assets\PlateTriggerHold.cs" />
+    <Compile Include="Assets\Scripts\PlateTriggerHold.cs" />
+    <Compile Include="Assets\Scripts\DespawnBall.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoProximityVoiceChat\Scripts\ChangeColor.cs" />
     <Compile Include="Assets\Connor\FallingFloor\FallingFloor.cs" />
-    <Compile Include="Assets\Rotater.cs" />
+    <Compile Include="Assets\Scripts\Rotater.cs" />
     <Compile Include="Assets\Photon\PhotonLibs\WebSocket\WebSocket.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\TextButtonTransition.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoProximityVoiceChat\Scripts\PointersController.cs" />
-    <Compile Include="Assets\NickName.cs" />
+    <Compile Include="Assets\Scripts\NickName.cs" />
     <Compile Include="Assets\Photon\PhotonLibs\WebSocket\SocketWebTcp.cs" />
     <Compile Include="Assets\Connor\Collectable\Collection.cs" />
     <Compile Include="Assets\Scripts\SpawnPlayers.cs" />
@@ -75,33 +76,33 @@
     <Compile Include="Assets\Bitgem\StylisedWater\URP\Scripts\Bitgem\VFX\StylisedWater\WaterVolumeBase.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChannelSelector.cs" />
     <Compile Include="Assets\Connor\Collectable\Collectable.cs" />
-    <Compile Include="Assets\NewBehaviourScript.cs" />
-    <Compile Include="Assets\PlateTrigger.cs" />
-    <Compile Include="Assets\PlatformScript.cs" />
+    <Compile Include="Assets\Scripts\PlateTrigger.cs" />
+    <Compile Include="Assets\Scripts\PlatformScript.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\IgnoreUiRaycastWhenInactive.cs" />
     <Compile Include="Assets\Scripts\LookAtMouse.cs" />
     <Compile Include="Assets\Connor\FallingFloor\FallingFloorFix.cs" />
-    <Compile Include="Assets\PlayerName.cs" />
+    <Compile Include="Assets\Scripts\PlayerName.cs" />
+    <Compile Include="Assets\Scripts\BallSpawner.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\EventSystemSpawner.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoProximityVoiceChat\Scripts\ChangeName.cs" />
     <Compile Include="Assets\Bitgem\StylisedWater\URP\Scripts\Bitgem\Core\FlagEnumAttribute.cs" />
     <Compile Include="Assets\Bitgem\StylisedWater\URP\Scripts\Bitgem\VFX\StylisedWater\WaterVolumeHelper.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\FriendItem.cs" />
-    <Compile Include="Assets\FoodObject.cs" />
-    <Compile Include="Assets\WebcamScript.cs" />
+    <Compile Include="Assets\Scripts\FoodObject.cs" />
+    <Compile Include="Assets\Scripts\WebcamScript.cs" />
     <Compile Include="Assets\Scripts\FirstPersonController.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatGui.cs" />
     <Compile Include="Assets\Bitgem\StylisedWater\URP\Scripts\Bitgem\VFX\StylisedWater\WaterVolumeBox.cs" />
     <Compile Include="Assets\Scripts\ConnectToServer.cs" />
-    <Compile Include="Assets\DoorWindow.cs" />
-    <Compile Include="Assets\WorldEndColliderScript.cs" />
+    <Compile Include="Assets\Scripts\DoorWindow.cs" />
+    <Compile Include="Assets\Scripts\WorldEndColliderScript.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\TextToggleIsOnTransition.cs" />
     <Compile Include="Assets\Bitgem\StylisedWater\URP\Scripts\Bitgem\VFX\StylisedWater\WateverVolumeFloater.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\OnStartDelete.cs" />
     <Compile Include="Assets\Scripts\CreateAndJoinRooms.cs" />
-    <Compile Include="Assets\OwnershipControl.cs" />
-    <Compile Include="Assets\BallSpawner.cs" />
-    <Compile Include="Assets\DespawnBall.cs" />
+    <Compile Include="Assets\Scripts\OwnershipControl.cs" />
+    <Compile Include="Assets\Scripts\DoorWallScript.cs" />
+    <Compile Include="Assets\Scripts\PlayerNameAboveHead.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
