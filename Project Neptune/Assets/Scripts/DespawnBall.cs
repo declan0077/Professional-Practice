@@ -8,7 +8,7 @@ public class DespawnBall : MonoBehaviour
     void Update()
     {
         time += Time.deltaTime;
-        if (time >= 6f)
+        if (time >= 10f)
         {
             Destroy(this.gameObject);
             time = 0;

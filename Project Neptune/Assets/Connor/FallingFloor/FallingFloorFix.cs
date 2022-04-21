@@ -8,7 +8,6 @@ public class FallingFloorFix : MonoBehaviour
     bool isFalse;
 
     Rigidbody myRB;
-    private bool checking = false;
 
     private Vector3 startLocation;
 
@@ -24,37 +23,34 @@ public class FallingFloorFix : MonoBehaviour
     {
         if (other.transform.tag == "Player")
         {
-            if (isFalse)
+            if (isFalse == false)
             {
                 DropFloor();
-                StartCoroutine("DoCheck");
             }
-            else
+            else if (isFalse == true)
             {
-                StartCoroutine("DoCheck");
+
             }
         }
     }
     IEnumerator DoCheck()
     {
-        checking = true;
+        yield return new WaitForSeconds(5f);
         myRB.isKinematic = false;
         transform.position = startLocation;
-        myRB.velocity = new Vector3(0, 0, 0);
         myRB.useGravity = false;
-        myRB.mass = 50;
-        yield return new WaitForSeconds(1f);
-        checking = false;
-  
+
+
+
 
     }
 
     private void DropFloor()
     {
+        Debug.Log("DA");
         myRB.isKinematic = true;
         myRB.useGravity = true;
         StartCoroutine("DoCheck");
-        myRB.mass = 1;
     }
 
     private void Restart()

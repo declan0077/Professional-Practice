@@ -10,7 +10,7 @@ public class BallSpawner : MonoBehaviour
     public int radius = 5;
     private void Start()
     {
-        rng = Random.Range(2, 7);
+        rng = Random.Range(5, 10);
     }
 
 
@@ -21,7 +21,7 @@ public class BallSpawner : MonoBehaviour
         {
             PhotonNetwork.Instantiate(ball.name, this.transform.position, Quaternion.identity);
             time = 0;
-            rng = Random.Range(2, 7);
+            rng = Random.Range(5, 10);
 
         }
     }

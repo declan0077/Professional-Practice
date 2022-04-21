@@ -20,6 +20,7 @@ public class FirstPersonController : MonoBehaviour
     private bool HoldingObject;
     private string playerName;
     private Vector3 spawnPos;
+    private float mousemovement = 10f;
 
     private float camRotation;
     #region Camera Movement Variables
@@ -227,12 +228,21 @@ public class FirstPersonController : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.Mouse0))
             {
-                fire();
-             
+
+                this.transform.position += transform.forward * Time.deltaTime * mousemovement;
+
             }
             if (Input.GetKeyUp(KeyCode.Mouse0))
             {
-                release();
+
+             
+
+            }
+            if (Input.GetKeyDown(KeyCode.Mouse1))
+            {
+                CheckGround();
+                Jump();
+               
             }
 
             #region Camera
@@ -398,46 +408,50 @@ public class FirstPersonController : MonoBehaviour
             Debug.DrawLine(playerCamera.transform.position, playerCamera.transform.forward * foward);
         }
     }
-    private void fire()
+   private void movefoward()
     {
-        if (view.IsMine)
-        {
-            RaycastHit hit;
-            if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, range))
-                if (HoldingObject == false)
-                {
-
-
-                    if (hit.collider != null && hit.collider.tag == "Object")
-                    {
-                        Debug.Log(hit.transform.name);
-                        hit.collider.GetComponent<Rigidbody>().useGravity = false;
-                        hit.transform.position = Hold.transform.position;
-                        hit.transform.parent = Hold.transform;
-                        hit.collider.transform.parent = Hold.transform;
-                        hit.collider.gameObject.GetComponent<OwnershipControl>().Ownershipcontroller();
-                        HoldingObject = true;
-
-                    }
-                }
-                else if (hit.collider == null)
-
-                {
-
-
-                }
-   
-        }
+        this.transform.position += transform.forward * Time.deltaTime * walkSpeed;
     }
-    private void release()
-    {
+    //private void fire()
+    //{
+    //    if (view.IsMine)
+    //    {
+    //        RaycastHit hit;
+    //        if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, range))
+    //            if (HoldingObject == false)
+    //            {
+
+
+    //                if (hit.collider != null && hit.collider.tag == "Object")
+    //                {
+    //                    Debug.Log(hit.transform.name);
+    //                    hit.collider.GetComponent<Rigidbody>().useGravity = false;
+    //                    hit.transform.position = Hold.transform.position;
+    //                    hit.transform.parent = Hold.transform;
+    //                    hit.collider.transform.parent = Hold.transform;
+    //                    hit.collider.gameObject.GetComponent<OwnershipControl>().Ownershipcontroller();
+    //                    HoldingObject = true;
+
+    //                }
+    //            }
+    //            else if (hit.collider == null)
+
+    //            {
+
+
+    //            }
+   
+    //    }
+    //} 
+    //private void release()
+    //{
    
    
-            Hold.transform.GetComponentInChildren<Rigidbody>().useGravity = true;
-            Hold.transform.DetachChildren();
-        HoldingObject = false;
+    //        Hold.transform.GetComponentInChildren<Rigidbody>().useGravity = true;
+    //        Hold.transform.DetachChildren();
+    //    HoldingObject = false;
       
-    }
+    //}
     void FixedUpdate()
     {
         if (view.IsMine)
