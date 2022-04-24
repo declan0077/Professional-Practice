@@ -186,31 +186,21 @@ public class FirstPersonController : MonoBehaviour
 
             #region Sprint Bar
 
-            sprintBarCG = GetComponentInChildren<CanvasGroup>();
-
+    
             if (useSprintBar)
             {
-                sprintBarBG.gameObject.SetActive(true);
-                sprintBar.gameObject.SetActive(true);
+               
 
-                float screenWidth = Screen.width;
-                float screenHeight = Screen.height;
-
-                sprintBarWidth = screenWidth * sprintBarWidthPercent;
-                sprintBarHeight = screenHeight * sprintBarHeightPercent;
-
-                sprintBarBG.rectTransform.sizeDelta = new Vector3(sprintBarWidth, sprintBarHeight, 0f);
-                sprintBar.rectTransform.sizeDelta = new Vector3(sprintBarWidth - 2, sprintBarHeight - 2, 0f);
+            
 
                 if (hideBarWhenFull)
                 {
-                    sprintBarCG.alpha = 0;
+          
                 }
             }
             else
             {
-                sprintBarBG.gameObject.SetActive(false);
-                sprintBar.gameObject.SetActive(false);
+      
             }
 
             #endregion
@@ -456,6 +446,7 @@ public class FirstPersonController : MonoBehaviour
     {
         if (view.IsMine)
         {
+            
             #region Movement
 
             if (playerCanMove)
@@ -499,7 +490,7 @@ public class FirstPersonController : MonoBehaviour
 
                         if (hideBarWhenFull && !unlimitedSprint)
                         {
-                            sprintBarCG.alpha += 5 * Time.deltaTime;
+                       
                         }
                     }
 
@@ -512,7 +503,7 @@ public class FirstPersonController : MonoBehaviour
 
                     if (hideBarWhenFull && sprintRemaining == sprintDuration)
                     {
-                        sprintBarCG.alpha -= 3 * Time.deltaTime;
+                 
                     }
 
                     targetVelocity = transform.TransformDirection(targetVelocity) * walkSpeed;

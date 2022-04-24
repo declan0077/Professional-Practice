@@ -6,12 +6,26 @@ public class BounceScript : MonoBehaviour
 {
     [SerializeField]
     float bounceForce = 500;
+    private Rigidbody rb;
+    Vector3 LastVelocity;
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+    private void Update()
+    {
+        LastVelocity = rb.velocity;
+    }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Object"))
         {
-            Rigidbody otherRB = collision.rigidbody;
-            otherRB.AddExplosionForce(bounceForce, collision.contacts[0].point, 1);
+
+            var speed = LastVelocity.magnitude;
+            var direction = Vector3.Reflect(LastVelocity.normalized, collision.contacts[0].normal);
+
+            rb.velocity = direction * Mathf.Max(speed, 0f);
+
         }
      
     }
