@@ -53,40 +53,40 @@
     <UnityVersion>2020.3.22f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\ConnectAndJoin.cs" />
-    <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\SaveIncomingStreamToFile.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Code\Speaker.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\AudioUtils\CSCore\WaveWriter.cs" />
-    <Compile Include="Assets\Photon\PhotonVoice\Code\AudioChangesHandler.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\TestTone.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\MicAmplifier\MicAmplifierShort.cs" />
-    <Compile Include="Assets\Photon\PhotonVoice\Code\RemoteVoiceLink.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\MicAmplifier\MicAmplifier.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Code\WebRtcAudioDsp.cs" />
-    <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\MicrophonePermission.cs" />
-    <Compile Include="Assets\Photon\PhotonVoice\Code\VoiceComponent.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Code\VoiceConnection.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\AudioUtils\CSCore\AudioSybTypes.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\PhotonVoiceLagSimulationGui.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\AudioUtils\CSCore\AudioSubTypes.Utils.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\AudioUtils\CSCore\IAudioSource.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\Recorder.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\AudioUtils\CSCore\WaveFormat.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\ConnectAndJoin.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\SaveIncomingStreamToFile.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\AudioChangesHandler.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\RemoteVoiceLink.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\MicrophonePermission.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\VoiceComponent.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\AudioUtils\CSCore\Extensions.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\AudioUtils\CSCore\IReadableAudioSource.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Code\NativeAndroidMicrophoneSettings.cs" />
-    <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\AudioUtils\CSCore\AudioSubTypes.Utils.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\SaveOutgoingStreamToFile.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Code\VoiceLogger.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\MicAmplifier\MicAmplifierEditor.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\AudioUtils\CSCore\IWriteable.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\AudioUtils\CSCore\AudioEncoding.cs" />
-    <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\AudioUtils\CSCore\IAudioSource.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\MicAmplifier\MicAmplifierFloat.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\PhotonVoiceStatsGui.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Code\AudioInEnumeratorEx.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Code\PlaybackDelaySettings.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\AudioUtils\CSCore\ChannelMask.cs" />
-    <Compile Include="Assets\Photon\PhotonVoice\Code\Recorder.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Code\ILoggable.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\AudioUtils\CSCore\WaveFormatExtensible.cs" />
-    <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\AudioUtils\CSCore\WaveFormat.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\AudioUtils\CSCore\IWaveSource.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -318,9 +318,6 @@
     <Reference Include="UnityEditor.Graphs">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.22f1\Editor\Data\Managed\UnityEditor.Graphs.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.WebGL.Extensions">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.22f1\Editor\Data\PlaybackEngines\WebGLSupport\UnityEditor.WebGL.Extensions.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.22f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
@@ -350,6 +347,9 @@
     </Reference>
     <Reference Include="unityplastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.13.5\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.NRefactory">
+      <HintPath>Library\PackageCache\com.unity.render-pipelines.core@10.7.0\Editor\ShaderGenerator\ICSharpCode.NRefactory.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.22f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>
