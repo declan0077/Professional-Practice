@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BounceScript : MonoBehaviour
 {
+    public AudioSource Bouncing;
     [SerializeField]
     float bounceForce = 500;
     private Rigidbody rb;
@@ -25,6 +26,8 @@ public class BounceScript : MonoBehaviour
             var direction = Vector3.Reflect(LastVelocity.normalized, collision.contacts[0].normal);
 
             rb.velocity = direction * Mathf.Max(speed, 0f);
+
+            Bouncing.Play();
 
         }
      

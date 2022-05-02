@@ -1069,7 +1069,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SynchronizePosition: 1
   m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
+  m_SynchronizeScale: 1
   m_UseLocal: 1
 --- !u!114 &3154433028206156640
 MonoBehaviour:
@@ -1083,6 +1083,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5d80f582ad9e354ca7c895f436c4175, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Bouncing: {fileID: 0}
   bounceForce: 500
 --- !u!1 &4459864850190357393
 GameObject:

@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class FallingFloorFix : MonoBehaviour
 {
+    public AudioSource Floorcreak;
+    public AudioSource FloorFall;
+
     [SerializeField]
     bool isFalse;
 
@@ -14,8 +17,10 @@ public class FallingFloorFix : MonoBehaviour
     private void Start()
     {
         myRB = GetComponent<Rigidbody>();
-      startLocation = transform.position;
+        startLocation = transform.position;
         StartCoroutine("DoCheck");
+
+        Floorcreak.Play();
     }
 
 
@@ -51,6 +56,7 @@ public class FallingFloorFix : MonoBehaviour
         myRB.isKinematic = true;
         myRB.useGravity = true;
         StartCoroutine("DoCheck");
+        FloorFall.Play();
     }
 
     private void Restart()

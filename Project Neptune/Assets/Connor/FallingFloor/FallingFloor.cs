@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class FallingFloor : MonoBehaviour
 {
+    public AudioSource Floorcreak;
+   
+
     bool isFalse;
     Renderer myRend;
 
@@ -20,6 +23,8 @@ public class FallingFloor : MonoBehaviour
 
     private void Start()
     {
+        Floorcreak.Play();
+        
         if (group.Length == 0)
             return;
 

@@ -21,6 +21,8 @@ public class FirstPersonController : MonoBehaviour
     private string playerName;
     private Vector3 spawnPos;
     private float mousemovement = 10f;
+    public AudioSource Bounce;
+    public AudioSource Footsteps;
 
     private float camRotation;
     #region Camera Movement Variables
@@ -401,6 +403,7 @@ public class FirstPersonController : MonoBehaviour
    private void movefoward()
     {
         this.transform.position += transform.forward * Time.deltaTime * walkSpeed;
+        Footsteps.Play();
     }
     //private void fire()
     //{
@@ -555,6 +558,7 @@ public class FirstPersonController : MonoBehaviour
             // Adds force to the player rigidbody to jump
             if (isGrounded)
             {
+                Bounce.Play();
                 rb.AddForce(0f, jumpPower, 0f, ForceMode.Impulse);
                 isGrounded = false;
             }
