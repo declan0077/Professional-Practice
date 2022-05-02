@@ -8,7 +8,7 @@ public class SpawnPlayers : MonoBehaviourPunCallbacks
 
 {
 
-    public AudioSource backgroundSound;
+
     public GameObject playerPrefab;
 
     public float minX;
@@ -19,7 +19,7 @@ public class SpawnPlayers : MonoBehaviourPunCallbacks
     private void Start()
     {
 
-        backgroundSound.Play();
+      
 #if DEBUG
         PhotonNetwork.ConnectUsingSettings();
 #else
