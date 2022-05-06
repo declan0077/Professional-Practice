@@ -26,7 +26,7 @@ public class DoorWallScript : MonoBehaviour
         //set the object's Y to the new calculated Y
         currentPos.x = startPos.x;
         currentPos.z = startPos.z;
-        currentPos.y = newY * height;
+        currentPos.y = startPos.y + newY * height;
 
         transform.position = currentPos;
     }
