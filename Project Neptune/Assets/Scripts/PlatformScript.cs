@@ -43,7 +43,7 @@ public class PlatformScript : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Point = false)
+        if (Point == false)
         {
             rb.MovePosition(Pos2);
             if (rb.transform.position == Pos2)

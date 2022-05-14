@@ -206,7 +206,10 @@ public class FirstPersonController : MonoBehaviour
             }
 
             #endregion
+           
+            
         }
+
     }
 
     public void restart()
@@ -630,6 +633,13 @@ public class FirstPersonController : MonoBehaviour
                 timer = 0;
                 joint.localPosition = new Vector3(Mathf.Lerp(joint.localPosition.x, jointOriginalPos.x, Time.deltaTime * bobSpeed), Mathf.Lerp(joint.localPosition.y, jointOriginalPos.y, Time.deltaTime * bobSpeed), Mathf.Lerp(joint.localPosition.z, jointOriginalPos.z, Time.deltaTime * bobSpeed));
             }
+        }
+    }
+    public void Knockback()
+    {
+        if (view.IsMine)
+        {
+            rb.AddForce(rb.velocity * -2 * 10);
         }
     }
 }

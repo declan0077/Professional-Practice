@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlateTriggerHold : MonoBehaviour
 {
-    public GameObject plate;
+    public GameObject FloorMoving;
     public Material On;
     public Material Off;
     private bool OnOrOff = false;
@@ -12,9 +12,12 @@ public class PlateTriggerHold : MonoBehaviour
     {
         if(OnOrOff == false && other.tag == "Object")
         {
-            plate.GetComponent<MeshRenderer>().material = On;
+            this.GetComponent<MeshRenderer>().material = On;
             Debug.Log("on");
             OnOrOff = true;
+            FloorMoving.GetComponent<Animator>().enabled = true;
+            FloorMoving.GetComponent<Animator>().Play("platform");
+          
         }
 
        
@@ -23,9 +26,10 @@ public class PlateTriggerHold : MonoBehaviour
     {
         if (OnOrOff == true && other.tag == "Object")
         {
-            plate.GetComponent<MeshRenderer>().material = Off;
+            this.GetComponent<MeshRenderer>().material = Off;
             Debug.Log("off");
             OnOrOff = false;
+            FloorMoving.GetComponent<Animator>().enabled = false;
         }
     }
 }

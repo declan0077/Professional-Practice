@@ -19,7 +19,7 @@ public class BounceScript : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Object"))
+        if (collision.gameObject.CompareTag("Player"))
         {
 
             var speed = LastVelocity.magnitude;
@@ -28,6 +28,10 @@ public class BounceScript : MonoBehaviour
             rb.velocity = direction * Mathf.Max(speed, 0f);
 
             Bouncing.Play();
+            if (collision.gameObject.GetComponent<FirstPersonController>())
+            {
+                collision.gameObject.GetComponent<FirstPersonController>().Knockback();
+            }
 
         }
      
