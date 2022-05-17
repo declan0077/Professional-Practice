@@ -29,7 +29,7 @@ public class PlateTriggerHold : MonoBehaviour
             this.GetComponent<MeshRenderer>().material = Off;
             Debug.Log("off");
             OnOrOff = false;
-            FloorMoving.GetComponent<Animator>().res = false;
+           
         }
     }
 }
