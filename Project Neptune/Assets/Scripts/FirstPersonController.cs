@@ -14,7 +14,7 @@ public class FirstPersonController : MonoBehaviour
 {
     PhotonView view;
     private Rigidbody rb;
-    public float range = 100;
+    public float range = 1;
     private float foward = 5;
     public GameObject Hold;
     private bool HoldingObject;
@@ -223,14 +223,24 @@ public class FirstPersonController : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.Mouse0))
             {
-
-                this.transform.position += transform.forward * Time.deltaTime * mousemovement;
+                if (HoldingObject == false)
+                {
+                    movefoward();
+                }
+           
+              
 
             }
-            if (Input.GetKeyUp(KeyCode.Mouse0))
+            if (Input.GetKeyDown(KeyCode.Mouse2))
             {
+                fire();
+          
 
-             
+            }
+            if (Input.GetKeyUp(KeyCode.Mouse2))
+            {
+              
+                release();
 
             }
             if (Input.GetKeyDown(KeyCode.Mouse1))
@@ -408,52 +418,59 @@ public class FirstPersonController : MonoBehaviour
         this.transform.position += transform.forward * Time.deltaTime * walkSpeed;
         Footsteps.Play();
     }
-    //private void fire()
-    //{
-    //    if (view.IsMine)
-    //    {
-    //        RaycastHit hit;
-    //        if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, range))
-    //            if (HoldingObject == false)
-    //            {
+    private void fire()
+    {
+        if (view.IsMine)
+        {
+            RaycastHit hit;
+            Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, range);
+                if (HoldingObject == false)
+                {
 
+                
+                    if (hit.collider.tag == "Ball")
+                    {
+                     
+                        Debug.Log(hit.transform.name);
+                        hit.collider.GetComponent<Rigidbody>().useGravity = false;
+                        hit.transform.position = Hold.transform.position;
+                        hit.transform.parent = Hold.transform;
+                        hit.collider.transform.parent = Hold.transform;
+                        hit.collider.gameObject.GetComponent<OwnershipControl>().Ownershipcontroller();
+                        HoldingObject = true;
 
-    //                if (hit.collider != null && hit.collider.tag == "Object")
-    //                {
-    //                    Debug.Log(hit.transform.name);
-    //                    hit.collider.GetComponent<Rigidbody>().useGravity = false;
-    //                    hit.transform.position = Hold.transform.position;
-    //                    hit.transform.parent = Hold.transform;
-    //                    hit.collider.transform.parent = Hold.transform;
-    //                    hit.collider.gameObject.GetComponent<OwnershipControl>().Ownershipcontroller();
-    //                    HoldingObject = true;
+                    }
+                }
+                else
+                {
 
-    //                }
-    //            }
-    //            else if (hit.collider == null)
+              
+                }
 
-    //            {
+        }
+    }
+    private void release()
+    {
 
-
-    //            }
-   
-    //    }
-    //} 
-    //private void release()
-    //{
-   
-   
-    //        Hold.transform.GetComponentInChildren<Rigidbody>().useGravity = true;
-    //        Hold.transform.DetachChildren();
-    //    HoldingObject = false;
+        if(HoldingObject == true)
+        {
       
-    //}
+
+            Hold.GetComponentInChildren<Rigidbody>().useGravity = true;
+            Hold.GetComponentInChildren<Rigidbody>().AddForce(playerCamera.transform.forward * 2000);
+            Hold.transform.DetachChildren();
+            HoldingObject = false;
+        }
+      
+
+    }
     void FixedUpdate()
     {
         if (view.IsMine)
         {
-            
-            #region Movement
+            if (HoldingObject == false)
+            {
+ #region Movement
 
             if (playerCanMove)
             {
@@ -526,6 +543,8 @@ public class FirstPersonController : MonoBehaviour
             }
 
             #endregion
+            }
+           
         }
     }
 
