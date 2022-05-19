@@ -503,6 +503,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1943156495}
+    - target: {fileID: 4569762402659855949, guid: 3c92dcbed314172449c19dc3d18cc96a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6b17f7988b6197545b8faf127ad3b333, type: 2}
     - target: {fileID: 4569762402659855950, guid: 3c92dcbed314172449c19dc3d18cc96a, type: 3}
       propertyPath: m_Name
       value: JumpingCube (2)
@@ -5843,6 +5847,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 822447755}
+    - target: {fileID: 4569762402659855949, guid: 3c92dcbed314172449c19dc3d18cc96a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6b17f7988b6197545b8faf127ad3b333, type: 2}
     - target: {fileID: 4569762402659855950, guid: 3c92dcbed314172449c19dc3d18cc96a, type: 3}
       propertyPath: m_Name
       value: JumpingCube (4)
@@ -5922,6 +5930,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1118970666}
+    - target: {fileID: 4569762402659855949, guid: 3c92dcbed314172449c19dc3d18cc96a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6b17f7988b6197545b8faf127ad3b333, type: 2}
     - target: {fileID: 4569762402659855950, guid: 3c92dcbed314172449c19dc3d18cc96a, type: 3}
       propertyPath: m_Name
       value: JumpingCube (3)
@@ -7867,6 +7879,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1961142496}
+    - target: {fileID: 4569762402659855949, guid: 3c92dcbed314172449c19dc3d18cc96a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6b17f7988b6197545b8faf127ad3b333, type: 2}
     - target: {fileID: 4569762402659855950, guid: 3c92dcbed314172449c19dc3d18cc96a, type: 3}
       propertyPath: m_Name
       value: JumpingCube (1)
@@ -22904,6 +22920,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1946461262}
+    - target: {fileID: 4569762402659855949, guid: 3c92dcbed314172449c19dc3d18cc96a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6b17f7988b6197545b8faf127ad3b333, type: 2}
     - target: {fileID: 4569762402659855950, guid: 3c92dcbed314172449c19dc3d18cc96a, type: 3}
       propertyPath: m_Name
       value: JumpingCube
