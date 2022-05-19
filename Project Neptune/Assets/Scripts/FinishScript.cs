@@ -11,9 +11,13 @@ public class FinishScript : MonoBehaviour
    
     public void OnTriggerEnter(Collider other)
     {
-        Cheer.Play();
-        coroutine = WaitAndPrint(2.0f);
-        StartCoroutine(coroutine);
+        if (other.CompareTag("Player"))
+        {
+            Cheer.Play();
+            coroutine = WaitAndPrint(2.0f);
+            StartCoroutine(coroutine);
+        }
+       
     }
     private IEnumerator WaitAndPrint(float waitTime)
     {
