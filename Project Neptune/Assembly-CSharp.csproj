@@ -88,6 +88,7 @@
     <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoProximityVoiceChat\Scripts\ProximityVoiceTrigger.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\NamePickGui.cs" />
     <Compile Include="Assets\AssetStoreOriginals\_SNAPS_PrototypingAssets\About\Scripts\Readme.cs" />
+    <Compile Include="Assets\SwiningballScript.cs" />
     <Compile Include="Assets\Connor\Collectable\Collectable.cs" />
     <Compile Include="Assets\Connor\PickUp.cs" />
     <Compile Include="Assets\Scripts\DoorWallScript.cs" />
@@ -110,7 +111,6 @@
     <Compile Include="Assets\Bitgem\StylisedWater\URP\Scripts\Bitgem\VFX\StylisedWater\WateverVolumeFloater.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\OnStartDelete.cs" />
     <Compile Include="Assets\Scripts\CreateAndJoinRooms.cs" />
-    <Compile Include="Assets\SwiningballScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

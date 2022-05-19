@@ -6,6 +6,7 @@ using Photon.Pun;
 
 public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
 {
+
     public InputField createInput;
     public InputField JoinInput;
 
@@ -20,7 +21,9 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
 
     public override void OnJoinedRoom()
     {
-        PhotonNetwork.LoadLevel("TestRoom");
+        PhotonNetwork.LoadLevel("Level1");
     }
 
 }
+
+
