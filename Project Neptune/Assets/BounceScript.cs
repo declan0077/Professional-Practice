@@ -22,15 +22,11 @@ public class BounceScript : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
 
-            var speed = LastVelocity.magnitude;
-            var direction = Vector3.Reflect(LastVelocity.normalized, collision.contacts[0].normal);
-
-            rb.velocity = direction * Mathf.Max(speed, 0f);
 
             Bouncing.Play();
-            if (collision.gameObject.GetComponent<FirstPersonController>())
+            if (collision.gameObject.GetComponent<Rigidbody>())
             {
-                collision.gameObject.GetComponent<FirstPersonController>().Knockback();
+                collision.gameObject.GetComponent<Rigidbody>().AddForce(rb.velocity * 1000);
             }
 
         }

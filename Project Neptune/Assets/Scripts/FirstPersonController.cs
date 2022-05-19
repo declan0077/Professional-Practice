@@ -23,8 +23,10 @@ public class FirstPersonController : MonoBehaviour
     private float mousemovement = 10f;
     public AudioSource Bounce;
     public AudioSource Footsteps;
-
+    public GameObject arrow;
+    private IEnumerator coroutine;
     private float camRotation;
+   private bool StartC = true;
     #region Camera Movement Variables
 
     public Camera playerCamera;
@@ -415,8 +417,22 @@ public class FirstPersonController : MonoBehaviour
     }
    private void movefoward()
     {
-        this.transform.position += transform.forward * Time.deltaTime * walkSpeed;
-        Footsteps.Play();
+        rb.AddForce(arrow.transform.forward * 45);
+        coroutine = WaitAndPrint(2f);
+        StartCoroutine(coroutine);
+    }
+
+    private IEnumerator WaitAndPrint(float waitTime)
+    {
+       
+        if(StartC == true)
+        {
+            StartC = false;
+            Footsteps.Play();
+            yield return new WaitForSeconds(waitTime);
+            StartC = true;
+        }
+       
     }
     private void fire()
     {

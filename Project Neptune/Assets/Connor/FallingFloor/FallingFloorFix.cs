@@ -20,7 +20,7 @@ public class FallingFloorFix : MonoBehaviour
         startLocation = transform.position;
         StartCoroutine("DoCheck");
 
-        Floorcreak.Play();
+
     }
 
 

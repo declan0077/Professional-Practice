@@ -1,19 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class FinishScript : MonoBehaviour
 {
     public AudioSource Cheer;
-    // Start is called before the first frame update
-    void Start()
+
+
+    private IEnumerator coroutine;
+   
+    public void OnTriggerEnter(Collider other)
     {
         Cheer.Play();
+        coroutine = WaitAndPrint(2.0f);
+        StartCoroutine(coroutine);
     }
-
-    // Update is called once per frame
-    void Update()
+    private IEnumerator WaitAndPrint(float waitTime)
     {
-        
+        yield return new WaitForSeconds(waitTime);
+        SceneManager.LoadScene("Main");
     }
 }
