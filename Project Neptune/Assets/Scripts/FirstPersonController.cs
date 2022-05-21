@@ -417,7 +417,7 @@ public class FirstPersonController : MonoBehaviour
     }
    private void movefoward()
     {
-        rb.AddForce(arrow.transform.forward * 45);
+        rb.AddForce(arrow.transform.forward * 325);
         coroutine = WaitAndPrint(2f);
         StartCoroutine(coroutine);
     }
