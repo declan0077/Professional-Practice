@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Levels/BridgeArea.unity
     guid: 567eca03670a9ee46bdc1f248ab51a33
+  - enabled: 1
+    path: Assets/Connor/ConnorScene.unity
+    guid: 76baaa4a76a24f24a86076070625081c
   m_configObjects: {}

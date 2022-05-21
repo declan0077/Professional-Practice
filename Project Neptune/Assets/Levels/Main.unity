@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 1d837ef9bf5f06d40a3ebc9be6c7b62b, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: b9406276a713e6f4db3307c61e7bc3f7, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.3707317, g: 0.64147407, b: 0.87595206, a: 1}
+  m_IndirectSpecularColor: {r: 0.5992311, g: 0.82076895, b: 0.94166243, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -140,7 +140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1605968189107347467, guid: 0afe3b0e0ef077445962de28a234834e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.5
+      value: 14.5
       objectReference: {fileID: 0}
     - target: {fileID: 1605968189107347467, guid: 0afe3b0e0ef077445962de28a234834e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -148,7 +148,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1605968189107347467, guid: 0afe3b0e0ef077445962de28a234834e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.5122366
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 1605968189107347467, guid: 0afe3b0e0ef077445962de28a234834e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -268,6 +268,10 @@ PrefabInstance:
     - target: {fileID: 3127431939542356181, guid: 1291f334d3a3086478d619e5aee5718f, type: 3}
       propertyPath: m_Color.r
       value: 0.8679245
+      objectReference: {fileID: 0}
+    - target: {fileID: 3363131286249682111, guid: 1291f334d3a3086478d619e5aee5718f, type: 3}
+      propertyPath: Level
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5002723747075706127, guid: 1291f334d3a3086478d619e5aee5718f, type: 3}
       propertyPath: m_RootOrder
@@ -752,6 +756,10 @@ PrefabInstance:
     - target: {fileID: 3127431939542356181, guid: 1291f334d3a3086478d619e5aee5718f, type: 3}
       propertyPath: m_Color.r
       value: 0.8679245
+      objectReference: {fileID: 0}
+    - target: {fileID: 3363131286249682111, guid: 1291f334d3a3086478d619e5aee5718f, type: 3}
+      propertyPath: Level
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5002723747075706127, guid: 1291f334d3a3086478d619e5aee5718f, type: 3}
       propertyPath: m_RootOrder
@@ -6568,7 +6576,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh76394
+  m_Name: pb_Mesh23146
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6753,7 +6761,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1605968189107347467, guid: 0afe3b0e0ef077445962de28a234834e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.5
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1605968189107347467, guid: 0afe3b0e0ef077445962de28a234834e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6761,7 +6769,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1605968189107347467, guid: 0afe3b0e0ef077445962de28a234834e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8
+      value: -10.5
       objectReference: {fileID: 0}
     - target: {fileID: 1605968189107347467, guid: 0afe3b0e0ef077445962de28a234834e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6819,6 +6827,10 @@ PrefabInstance:
     - target: {fileID: 3127431939542356181, guid: 1291f334d3a3086478d619e5aee5718f, type: 3}
       propertyPath: m_Color.r
       value: 0.8679245
+      objectReference: {fileID: 0}
+    - target: {fileID: 3363131286249682111, guid: 1291f334d3a3086478d619e5aee5718f, type: 3}
+      propertyPath: Level
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5002723747075706127, guid: 1291f334d3a3086478d619e5aee5718f, type: 3}
       propertyPath: m_RootOrder

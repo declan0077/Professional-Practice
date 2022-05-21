@@ -16,9 +16,9 @@ public class ScoreScript : MonoBehaviour
         MyScoretext.text = "Score" + ScoreNum;
     }
 
-    private void OnTriggerEnter(Collider Goal)
+    private void OnTriggerEnter(Collider Ball)
     {
-        if (Goal.tag == "Goal")
+        if (Ball.tag == "Ball")
         {
             ScoreNum += 1;
             MyScoretext.text = "Score" + ScoreNum;
