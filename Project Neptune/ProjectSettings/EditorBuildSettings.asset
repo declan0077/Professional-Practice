@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Bowling.unity
     guid: aeb89dca89b50474f8dc6b5a3ed87af4
+  - enabled: 1
+    path: Assets/Levels/Maze.unity
+    guid: 7e4ee3a3fb06ea54a9acf9dc6b08b02f
   m_configObjects: {}

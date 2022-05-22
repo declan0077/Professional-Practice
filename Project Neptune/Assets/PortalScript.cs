@@ -12,6 +12,9 @@ public class PortalScript : MonoBehaviour
         {
             switch (Level)
             {
+                case 5:
+                    SceneManager.LoadScene("Maze");
+                    break;
                 case 4:
                     SceneManager.LoadScene("Bowling");
                     break;
