@@ -8,6 +8,8 @@ TagManager:
   - Object
   - Ball
   - Goal
+  - Pin
+  - dead
   layers:
   - Default
   - TransparentFX

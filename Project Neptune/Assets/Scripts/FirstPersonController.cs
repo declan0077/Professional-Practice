@@ -453,7 +453,9 @@ public class FirstPersonController : MonoBehaviour
                         hit.transform.parent = Hold.transform;
                         hit.collider.transform.parent = Hold.transform;
                         hit.collider.gameObject.GetComponent<OwnershipControl>().Ownershipcontroller();
-                        HoldingObject = true;
+                        rb.velocity = new Vector3();
+                        hit.collider.gameObject.GetComponent<Rigidbody>().velocity = new Vector3();
+                    HoldingObject = true;
 
                     }
                 }

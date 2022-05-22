@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Connor/ConnorScene.unity
+- path: Assets/Levels/Lobby.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

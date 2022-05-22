@@ -1,0 +1,2 @@
+C:\Users\iceth\OneDrive\Documents\GitHub\Professional-Practice\Project Neptune\obj\Debug\PhotonVoice.API.csproj.AssemblyReference.cache
+C:\Users\iceth\OneDrive\Documents\GitHub\Professional-Practice\Project Neptune\obj\Debug\PhotonVoice.API.csproj.CoreCompileInputs.cache

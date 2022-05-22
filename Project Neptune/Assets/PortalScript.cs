@@ -12,6 +12,9 @@ public class PortalScript : MonoBehaviour
         {
             switch (Level)
             {
+                case 4:
+                    SceneManager.LoadScene("Bowling");
+                    break;
                 case 3:
                     SceneManager.LoadScene("ConnorScene");
                     break;
@@ -22,7 +25,7 @@ public class PortalScript : MonoBehaviour
                     SceneManager.LoadScene("Level1");
                     break;
                 default:
-                    SceneManager.LoadScene("Lobby");
+                    SceneManager.LoadScene("Main");
                     break;
             }
         }
