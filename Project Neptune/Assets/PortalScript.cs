@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Photon.Pun;
 public class PortalScript : MonoBehaviour
 {
     public int Level = 0;
@@ -13,22 +14,22 @@ public class PortalScript : MonoBehaviour
             switch (Level)
             {
                 case 5:
-                    SceneManager.LoadScene("Maze");
+                    PhotonNetwork.LoadLevel("Maze");
                     break;
                 case 4:
-                    SceneManager.LoadScene("Bowling");
+                    PhotonNetwork.LoadLevel("Bowling");
                     break;
                 case 3:
-                    SceneManager.LoadScene("ConnorScene");
+                    PhotonNetwork.LoadLevel("ConnorScene");
                     break;
                 case 2:
-                    SceneManager.LoadScene("BridgeArea");
+                    PhotonNetwork.LoadLevel("BridgeArea");
                     break;
                 case 1:
-                    SceneManager.LoadScene("Level1");
+                    PhotonNetwork.LoadLevel("Level1");
                     break;
                 default:
-                    SceneManager.LoadScene("Main");
+                    PhotonNetwork.LoadLevel("Main");
                     break;
             }
         }
