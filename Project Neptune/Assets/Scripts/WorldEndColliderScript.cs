@@ -9,6 +9,7 @@ public class WorldEndColliderScript : MonoBehaviour
         if (other.CompareTag("Player")) 
         {
             other.GetComponent<FirstPersonController>().restart();
+            other.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
         }
     }
 }

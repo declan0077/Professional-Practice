@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Photon.Pun;
+using TMPro;
 
 #if UNITY_EDITOR
     using UnityEditor;
@@ -26,6 +27,7 @@ public class FirstPersonController : MonoBehaviour
     private IEnumerator coroutine;
     private float camRotation;
    private bool StartC = true;
+  
     #region Camera Movement Variables
 
     public Camera playerCamera;
@@ -211,8 +213,8 @@ public class FirstPersonController : MonoBehaviour
             }
 
             #endregion
-           
-            
+         
+
         }
 
     }
@@ -221,22 +223,12 @@ public class FirstPersonController : MonoBehaviour
     {
         transform.position = spawnPos;
     }
-
+ 
     private void Update()
     {
-        if (view.IsMine)
-        {
-            if (Input.GetKey(KeyCode.Mouse0))
+            if (view.IsMine)
             {
-                if (HoldingObject == false)
-                {
-                    movefoward();
-                }
-           
-              
-
-            }
-            if (Input.GetKeyDown(KeyCode.Mouse2))
+                if (Input.GetKeyDown(KeyCode.Mouse2))
             {
                 fire();
           
@@ -416,11 +408,12 @@ public class FirstPersonController : MonoBehaviour
                 HeadBob();
             }
             Debug.DrawLine(playerCamera.transform.position, playerCamera.transform.forward * foward);
+          
         }
     }
    private void movefoward()
     {
-        rb.AddForce(arrow.transform.forward * 325);
+        rb.AddForce(arrow.transform.forward * 425);
         coroutine = WaitAndPrint(2f);
         StartCoroutine(coroutine);
     }
@@ -489,6 +482,14 @@ public class FirstPersonController : MonoBehaviour
     {
         if (view.IsMine)
         {
+         
+                if (Input.GetKey(KeyCode.Mouse0))
+                {
+                    if (HoldingObject == false)
+                    {
+                        movefoward();
+                    }
+                }
             if (HoldingObject == false)
             {
  #region Movement
