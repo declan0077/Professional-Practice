@@ -39,4 +39,10 @@ public class OwnershipControl : MonoBehaviourPun, IPunOwnershipCallbacks
     {
         base.photonView.RequestOwnership();
     }
+    public void Start()
+    {
+
+      PhotonNetwork.AutomaticallySyncScene = true;
+
+    }
 }

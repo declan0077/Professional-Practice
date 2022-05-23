@@ -9,8 +9,9 @@ public class PortalScript : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && PhotonNetwork.IsMasterClient)
         {
+
             switch (Level)
             {
                 case 5:
