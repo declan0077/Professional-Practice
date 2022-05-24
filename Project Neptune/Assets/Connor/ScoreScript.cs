@@ -7,7 +7,7 @@ public class ScoreScript : MonoBehaviour
 {
     public Text MyScoretext;
     private int ScoreNum;
-
+    public GameObject Wall;
 
     // Start is called before the first frame update
     void Start()
@@ -15,21 +15,27 @@ public class ScoreScript : MonoBehaviour
         ScoreNum = 0;
         MyScoretext.text = "Score" + ScoreNum;
     }
+    private void Update()
+    {
+        if (ScoreNum <= 1)
+        {
+            Wall.GetComponent<Animator>().Play("WallMove", -1, 0f);
+        }
+
+
+    }
 
     private void OnTriggerEnter(Collider Ball)
     {
         if (Ball.tag == "Ball")
         {
-            ScoreNum += 1;
+            ScoreNum += 2;
             MyScoretext.text = "Score" + ScoreNum;
 
        
 
         }
-        if (ScoreNum == 1) 
-
-        {
-            
-        }
+       
+        
     }
 }
