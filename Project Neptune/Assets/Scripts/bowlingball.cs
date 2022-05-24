@@ -14,12 +14,7 @@ public class bowlingball : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Pin"))
-        {
-            other.gameObject.GetComponent<pinscript>().hit();
-            text.score += 1;
-            other.gameObject.tag = "dead";
-        }
+       
         if (other.CompareTag("Goal"))
         {
             gameObject.transform.position = startpos;

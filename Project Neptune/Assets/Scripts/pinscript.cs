@@ -14,24 +14,18 @@ public class pinscript : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Pin"))
+        if (other.CompareTag("Ground"))
         {
-            other.gameObject.GetComponent<pinscript>().hit();
+           
             text.score += 1;
-            other.gameObject.tag = "dead";
             this.tag  = "dead";
-            hit();
+
         }
       
     }
     public void hit()
     {
-        StartCoroutine(Fade());
+
     }
-    IEnumerator Fade()
-    {
-        yield return new WaitForSeconds(5f);
-        this.transform.position = new Vector3(startpos.x, 0.561f, startpos.z);
-        this.transform.rotation = rot.transform.rotation;
-    }
+
 }
