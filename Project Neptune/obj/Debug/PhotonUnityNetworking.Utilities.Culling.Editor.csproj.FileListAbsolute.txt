@@ -1,0 +1,2 @@
+C:\Users\iceth\OneDrive\Documents\GitHub\Professional-Practice\Project Neptune\obj\Debug\PhotonUnityNetworking.Utilities.Culling.Editor.csproj.AssemblyReference.cache
+C:\Users\iceth\OneDrive\Documents\GitHub\Professional-Practice\Project Neptune\obj\Debug\PhotonUnityNetworking.Utilities.Culling.Editor.csproj.CoreCompileInputs.cache

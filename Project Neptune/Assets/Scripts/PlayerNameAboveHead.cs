@@ -7,11 +7,14 @@ using TMPro;
 
 public class PlayerNameAboveHead : MonoBehaviour
 {
+
  public TextMeshPro Name;
-        private void Start()
+    public string Playername;
+    public int PlayerNumber;
+    public void NameSelf()
     {
 
-        Name.text = PhotonNetwork.NickName;
+        Name.text = Playername + PlayerNumber ; 
     }
 
 

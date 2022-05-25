@@ -438,7 +438,7 @@ public class FirstPersonController : MonoBehaviour
             Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, range);
                 if (HoldingObject == false)
                 {
-
+                
                 
                     if (hit.collider.tag == "Ball")
                     {
@@ -452,8 +452,9 @@ public class FirstPersonController : MonoBehaviour
                         rb.velocity = new Vector3();
                         hit.collider.gameObject.GetComponent<Rigidbody>().velocity = new Vector3();
                     HoldingObject = true;
+                    GetComponent<Renderer>().material.color = Color.red;
 
-                    }
+                }
                 }
                 else
                 {
@@ -468,8 +469,8 @@ public class FirstPersonController : MonoBehaviour
 
         if(HoldingObject == true)
         {
-      
 
+            GetComponent<Renderer>().material.color = Color.white;
             Hold.GetComponentInChildren<Rigidbody>().useGravity = true;
             Hold.GetComponentInChildren<Rigidbody>().AddForce(playerCamera.transform.forward * 2000);
             Hold.transform.DetachChildren();

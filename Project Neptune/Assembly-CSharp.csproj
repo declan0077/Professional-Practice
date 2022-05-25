@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scripts\PlayerName.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\EventSystemSpawner.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoProximityVoiceChat\Scripts\ChangeName.cs" />
+    <Compile Include="Assets\CheckgroundScript.cs" />
     <Compile Include="Assets\Scripts\FoodObject.cs" />
     <Compile Include="Assets\Scripts\FirstPersonController.cs" />
     <Compile Include="Assets\Scripts\Bowlingtext.cs" />
@@ -116,7 +117,8 @@
     <Compile Include="Assets\Bitgem\StylisedWater\URP\Scripts\Bitgem\VFX\StylisedWater\WateverVolumeFloater.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\OnStartDelete.cs" />
     <Compile Include="Assets\Scripts\CreateAndJoinRooms.cs" />
-    <Compile Include="Assets\CheckgroundScript.cs" />
+    <Compile Include="Assets\Scriptplayername.cs" />
+    <Compile Include="Assets\Islocal.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -831,10 +833,6 @@
       <Project>{ACF5E945-6F1C-A141-5B10-1270AAF36A31}</Project>
       <Name>PhotonUnityNetworking.Utilities.PhotonPlayer.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="PunDemos.DemoHubEditor.csproj">
-      <Project>{16E45C05-405A-00CE-917C-9F36E70299A3}</Project>
-      <Name>PunDemos.DemoHubEditor</Name>
-    </ProjectReference>
     <ProjectReference Include="PhotonRealtime.csproj">
       <Project>{C2EE161D-A358-2591-EBEF-14B6A0E05B61}</Project>
       <Name>PhotonRealtime</Name>
@@ -855,10 +853,6 @@
       <Project>{02059FF7-0E07-905C-DB08-3F651A24688B}</Project>
       <Name>PhotonVoice.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="PhotonUnityNetworking.Demos.csproj">
-      <Project>{FE33EB1D-2C17-37F2-F5C2-9F2C87C6F2A7}</Project>
-      <Name>PhotonUnityNetworking.Demos</Name>
-    </ProjectReference>
     <ProjectReference Include="PhotonVoice.PUN.Editor.csproj">
       <Project>{C4C6D066-7CB9-A89A-DB0F-130280173001}</Project>
       <Name>PhotonVoice.PUN.Editor</Name>
@@ -866,10 +860,6 @@
     <ProjectReference Include="PhotonVoice.Utilities.Editor.csproj">
       <Project>{B3FEFA39-9817-E164-0FAE-61794711C3D3}</Project>
       <Name>PhotonVoice.Utilities.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="PunDemos.DemoSlotcarEditor.csproj">
-      <Project>{16C1E41F-8A28-D5A1-CC28-2E93244E3A60}</Project>
-      <Name>PunDemos.DemoSlotcarEditor</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonVoice.PUN.csproj">
       <Project>{968290AF-95CD-BD76-D753-EB19A33EFA31}</Project>
