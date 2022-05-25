@@ -21,7 +21,7 @@ public class FirstPersonController : MonoBehaviour
     private bool HoldingObject;
     private string playerName;
     private Vector3 spawnPos;
-    private float mousemovement = 10f;
+    public float mousemovement = 10f;
     public AudioSource Footsteps;
     public GameObject arrow;
     private IEnumerator coroutine;
